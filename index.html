@@ -3,28 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>수학 문제 풀기</title>
+    <title>My GitHub Pages Website</title>
 </head>
 <body>
-    <h1>수학 문제 풀기</h1>
-    <form method="POST" action="{{ url_for('check_answer') }}">
-        {% for problem in problems %}
-        <div>
-            <p>{{ problem['question'] }}</p>
-            <input type="hidden" name="problem_id" value="{{ problem['id'] }}">
-            <input type="text" name="answer" placeholder="정답을 입력하세요" required>
-        </div>
-        {% endfor %}
-        <button type="submit">제출</button>
-    </form>
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    <ul>
-        {% for category, message in messages %}
-        <li class="alert alert-{{ category }}">{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+    <h1>Hello, GitHub Pages!</h1>
+    <p>This is a simple example of a website hosted on GitHub Pages.</p>
+</body>
+</html>
     {% endwith %}
 </body>
 </html>
